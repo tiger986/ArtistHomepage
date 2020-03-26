@@ -1,0 +1,252 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size: 14px; 
+}
+table {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0; 
+}
+fieldset, img {
+	border: 0; 
+}
+img {
+	vertical-align: top;
+	border: none; 
+}
+address, caption, cite, code, dfn, th, var {
+	font-style: normal;
+	font-weight: normal; 
+}
+ol, ul, li {
+	list-style: none; 
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal; 
+}
+abbr, acronym {
+	border: 0; 
+}
+em, i {
+	font-style: normal; 
+}
+a {
+	text-decoration: none; 
+}
+.fl {
+	float: left; 
+}
+.fr {
+	float: right; 
+}
+.clearfix {
+	zoom: 1; 
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both; 
+}
+input {
+	border: none;
+	outline: none;
+	background: none; 
+}
+body{
+	background: white;
+}
+a{
+	color: #333333;
+}
+
+
+
+.homeBox{
+	width: 100%;
+	overflow: hidden;
+	background: url('../image/homeBg.png') no-repeat;
+	background-size: 100%;
+	min-width: 1200px;
+}
+
+.homeBox_pcTop{
+	width: 100%;
+	overflow: hidden;
+}
+.homeBox_pcTop .homeBox_pcTop_log{
+	width: 100%;
+	height: 100px;
+	margin-top: 50px
+}
+.homeBox_pcTop_log img{
+	width: 180px;
+	height: 100px;
+	float: left;
+	margin-left: 200px;
+}
+.homeBox_pcTop_log p{
+	width: 300px;
+	height: 100px;
+	float: left;
+	margin-left: 30px;
+	font-size: 30px;
+	color: black;
+	line-height: 100px;
+	font-weight: bold;
+}
+.homeBox_pcTop .homeBox_pcTop_bar{
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin-top: 20px;
+}
+.homeBox_pcTop_bar .pcTop_bar_con{
+	width: 1200px;
+	height: 80px;
+	margin: 0 auto;
+}
+.pcTop_bar_con .pcTop_bar_con_list{
+	width: 800px;
+	height: 80px;
+	float: left;
+}
+.pcTop_bar_con_list a{
+	float: left;
+	height: 80px;
+	font-size: 24px;
+	color: #000000;
+	line-height: 80px;
+	margin-right: 102px;
+	cursor: pointer;
+}
+.pcTop_bar_con_list .barColor{
+	color: #ffffff;
+}
+.pcTop_bar_con_list a:hover{
+	color: #ffffff;
+}
+.pcTop_bar_con .pcTop_bar_con_btn{
+	/* width: 200px; */
+	height: 80px;
+	float: right;
+}
+.pcTop_bar_con_btn a{
+	height: 80px;
+	float: left;
+	font-size: 22px;
+	line-height: 80px;
+	color: #333333;
+	cursor: pointer;
+}
+.pcTop_bar_con_btn b{
+	float: left;
+	height: 80px;
+	font-size: 22px;
+	line-height: 80px;
+	color: #333333;
+	font-weight: normal;
+	margin: 0 5px;
+}
+.pcTop_bar_con_btn span{
+	float: right;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #333333;
+	border-radius: 50%;
+	margin: 24px 0 0 20px;
+	font-size: 16px;
+	color: #333333;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.homeBox_footer{
+	width: 100%;
+	height: 428px;
+	margin-top: 10px;
+	background-color: #000000;
+	overflow: hidden;
+}
+.homeBox_footer_con{
+	width: 1200px;
+	height: 180px;
+	margin: 150px auto 0;
+}
+.homeBox_footer_con_left{
+	width: 594px;
+	height: 180px;
+	float: left;
+}
+.homeBox_footer_con_left p{
+	width: 100%;
+	height: 18px;
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 18px;
+	margin-bottom: 15px;
+}
+.homeBox_footer_con_left p span{
+	margin-right: 55px;
+}
+.homeBox_footer_con_center{
+	width: 438px;
+	height: 180px;
+	float: left;
+}
+.homeBox_footer_con_center_li{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.homeBox_footer_con_center_li_icon{
+	width: 37px;
+	height: 37px;
+	float: left;
+}
+.homeBox_footer_con_center_li_icon1{
+	background: url('../image/phone_icon.png') no-repeat center;
+	background-size: 37px 35px;
+}
+.homeBox_footer_con_center_li_icon2{
+	background: url('../image/address_icon.png') no-repeat center;
+	background-size: 30px 35px;
+}
+.homeBox_footer_con_center_li_text{
+	width: 383px;
+	float: right;
+}
+.homeBox_footer_con_center_li_text p{
+	width: 100%;
+	height: 18px;
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 18px;
+	margin-bottom: 8px;
+}
+.homeBox_footer_con_center_li_text p span{
+	margin-right: 26px;
+}
+.homeBox_footer_con_right{
+	width: 153px;
+	height: 153px;
+	float: right;
+}
+.homeBox_footer_con_right img{
+	display: block;
+	width: 153px;
+	height: 153px;
+}
+
+
+
+.hide{
+	display: none;
+}

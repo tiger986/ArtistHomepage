@@ -1,0 +1,179 @@
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.aboutBox {
+  margin-top: 15px;
+  position: relative;
+  padding: 22px 40px 130px 40px;
+  box-sizing: border-box;
+}
+.aboutBox .aboutBox_pcTop {
+  position: relative;
+  margin-bottom: 80px;
+}
+.aboutBox .aboutBox_pcTop > img {
+  position: absolute;
+  left: 50%;
+  margin-left: 239px;
+  top: 108px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_mbx {
+  margin-bottom: 70px;
+  line-height: 38px;
+  font-size: 18px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_mbx img:nth-child(1) {
+  margin-right: 10px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_mbx span {
+  color: #333;
+  margin-right: 15px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_mbx img:nth-child(3) {
+  margin-right: 20px;
+  margin-top: 11px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_mbx em {
+  color: #fff;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list {
+  height: 637px;
+  width: 785px;
+  position: relative;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 540px;
+  top: 22px;
+  left: 220px;
+  background: #e5e5e5;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li {
+  height: 210px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li:nth-child(2) .aboutBox_pcTop_list_left {
+  padding-top: 53px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li:nth-child(2) .aboutBox_pcTop_list_left p:nth-child(1) {
+  font-weight: normal;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li:nth-child(2) .aboutBox_pcTop_list_left p:nth-child(1):after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  left: 214px;
+  top: 25px;
+  z-index: 2;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li:nth-child(3) {
+  padding-top: 100px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li .aboutBox_pcTop_list_left {
+  width: 170px;
+  float: left;
+  text-align: right;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li .aboutBox_pcTop_list_left p:nth-child(1) {
+  font-size: 20px;
+  color: rgba(51, 51, 51, 0.7);
+  line-height: 35px;
+  font-weight: bold;
+  position: relative;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li .aboutBox_pcTop_list_left p:nth-child(1):before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 211px;
+  top: 22px;
+  background: #e5e5e5;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li .aboutBox_pcTop_list_left p:nth-child(2) {
+  font-size: 16px;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li .aboutBox_pcTop_list_right {
+  width: 500px;
+  float: right;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li .aboutBox_pcTop_list_right p:nth-child(1) {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 12px;
+  line-height: 22px;
+}
+.aboutBox .aboutBox_pcTop .aboutBox_pcTop_list li .aboutBox_pcTop_list_right p:nth-child(2) {
+  font-size: 14px;
+  color: #535353;
+  line-height: 22px;
+}
+.aboutBox .aboutBox_pcBottom > h2 {
+  margin-bottom: 50px;
+  position: relative;
+}
+.aboutBox .aboutBox_pcBottom > h2 i {
+  float: left;
+  height: 25px;
+  margin-right: 3px;
+  color: #333333;
+  font-style: italic;
+}
+.aboutBox .aboutBox_pcBottom > h2 i:nth-child(1) {
+  font-size: 14px;
+  line-height: 14px;
+}
+.aboutBox .aboutBox_pcBottom > h2 i:nth-child(2) {
+  font-size: 24px;
+}
+.aboutBox .aboutBox_pcBottom > h2 i:nth-child(3) {
+  font-size: 24px;
+  font-weight: bold;
+}
+.aboutBox .aboutBox_pcBottom .aboutBox_pcBottom_desc {
+  margin-bottom: 75px;
+}
+.aboutBox .aboutBox_pcBottom .aboutBox_pcBottom_desc h3 {
+  position: relative;
+  padding-left: 33px;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  line-height: 26px;
+}
+.aboutBox .aboutBox_pcBottom .aboutBox_pcBottom_desc h3:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #000;
+  left: 11px;
+  top: 9px;
+}
+.aboutBox .aboutBox_pcBottom .aboutBox_pcBottom_desc h3 span {
+  padding-left: 5px;
+  font-size: 16px;
+  color: rgba(70, 70, 70, 0.4);
+}
+.aboutBox .aboutBox_pcBottom .aboutBox_pcBottom_desc p {
+  font-size: 16px;
+  color: #000;
+  line-height: 28px;
+  padding: 0 10px;
+}
+
+/*# sourceMappingURL=about.css.map */

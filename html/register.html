@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/public.css">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="registerController">
+	<a class="backHomeBtn" href="home.html">
+		<span ms-html="language=='CN'?'返回首页':'Back home'"></span>
+		<img src="../image/register/register_home.png">
+	</a>
+	<div class="registerBox">
+		<div class="registerBox_form">
+			<h3 ms-html="language=='CN'?'账号注册':'Account registration'"></h3>
+			<div class="clearfix">
+				<img src="../image/register/register_mobile.png">
+				<input type="tel" name="mobile" ms-attr-placeholder="language=='CN'?'请输入用户名/手机号':'User name or phone number'" ms-duplex="mobile">
+			</div>
+			<div class="clearfix">
+				<img src="../image/register/register_pwd.png">
+				<input type="password" name="password" ms-attr-placeholder="language=='CN'?'密码(6-16位字母、数字和符号)':'6-16 letters, Numbers and symbols'" ms-duplex="password">
+			</div>
+			<div class="clearfix">
+				<img src="../image/register/register_pwd.png">
+				<input type="password" name="password2" ms-attr-placeholder="language=='CN'?'确认密码':'Confirm password'" ms-duplex="password2" >
+			</div>
+			<div class="fl registerBox_form_verification"><input type="text" name="verification" ms-attr-placeholder="language=='CN'?'验证码':'Verification code'" ms-duplex="verification"></div>
+			<span class="fl registerBox_form_getVerification" ms-class="hide:verificationFlag" ms-html="verificationText" ms-click="getVerification()"></span>
+			<span class="fl registerBox_form_getVerification hide" ms-class="hide:!verificationFlag" ms-html="verificationTime">300</span>
+			<span class="registerBtn" ms-html="language=='CN'?'注册':'Registration'" ms-click="registerClick('pc')"></span>
+			<p>
+				<span class="radioBtn" ms-class="click:flag" ms-click="radiochecked()"></span>
+				<b style="font-weight: normal" ms-html="language=='CN'?'已阅读并同意《用户协议》《隐私政策》':'Have read and agreed to the user agreement, privacy policy.'"></b>
+			</p>
+			<a class="signBtn" ms-html="language=='CN'?'登录':'Sign in'" href="sign.html"></a>
+		</div>
+	</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
+
+<script>
+    require(['./register'], function (model) {
+
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+		if(model.language == 'CN'){
+			model.verificationText = '获取验证码';
+		}else{
+			model.verificationText = 'Get code';
+		}
+
+	
+        avalon.scan();
+    });
+</script>

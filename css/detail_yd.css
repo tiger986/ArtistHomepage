@@ -1,0 +1,229 @@
+.detail_pic{
+    width: 7.05rem;
+    height: 4.16rem;
+    margin: 0.25rem auto 0;
+    background: url('../image/detial/detail_ydBg.png') no-repeat center;
+    background-size: 7.05rem 4.16rem; 
+    overflow: hidden;
+}
+.detail_pic img{
+    display: block;
+    width: 6.25rem;
+    height: 3.42rem;
+    margin: 0.38rem auto 0;
+    border-radius: 0.06rem;
+}
+
+.detail_info{
+    width: 7.05rem;
+    margin: 0.5rem auto 0;
+}
+.detail_info_a{
+    width: 100%;
+    overflow: hidden;
+}
+.detail_info_a p{
+    height: 0.34rem;
+    float: left;
+    font-size: 0.3rem;
+    color: #333333;
+    line-height: 0.34rem;
+}
+.detail_info_a span{
+    float: right;
+    height: 0.34rem;
+    font-size: 0.2rem;
+    color: #666666;
+    line-height: 0.34rem;
+}
+.detail_info_b{
+    width: 100%;
+    margin-top: 0.3rem;
+    overflow: hidden;
+}
+.detail_info_b p{
+    height: 0.28rem;
+    float: left;
+    padding-left: 0.38rem;
+    background: url('../image/yd_address_icon.png') no-repeat 0.14rem top;
+    background-size: 0.17rem 0.25rem; 
+    font-size: 0.2rem;
+    color: #666666;
+    line-height: 0.28rem;
+}
+.detail_info_b span{
+    float: left;
+    height: 0.28rem;
+    font-size: 0.2rem;
+    color: #666666;
+    line-height: 0.28rem;
+    margin-left: 0.3rem;
+}
+.detail_info_c{
+    width: 100%;
+    margin-top: 0.24rem;
+    font-size: 0.24rem;
+    color: #666666;
+    line-height: 0.36rem;
+}
+
+.detail_jump{
+    width: 7.05rem;
+    margin: 0.3rem auto 0;
+    padding-bottom: 0.18rem;
+    border-bottom: 1px dashed #999999;
+}
+.detail_jump_li{
+    width: 100%;
+    margin-bottom: 0.24rem;
+    overflow: hidden;
+}
+.detail_jump_li_a{
+    width: 1.3rem;
+    height: 0.48rem;
+    background-color: #000000;
+    border-radius: 0.08rem;
+    float: left;
+    font-size: 0.26rem;
+    color: #ffffff;
+    line-height: 0.48rem;
+    text-align: center;
+}
+.detail_jump_li_b{
+    float: left;
+    height: 0.48rem;
+    margin-left: 0.18rem;
+    font-size: 0.24rem;
+    line-height: 0.48rem;
+    color: #666666;
+}
+
+.detail_commentTitle{
+    width: 7.05rem;
+    margin: 0.35rem auto 0;
+}
+.detail_commentTitle_a{
+    height: 0.36rem;
+    font-size: 0.3rem;
+    color: #333333;
+    line-height: 0.36rem;
+}
+.detail_commentTitle_b{
+    height: 0.26rem;
+    margin-top: 0.03rem;
+    font-size: 0.22rem;
+    color: #666666;
+    line-height: 0.26rem;
+}
+.detail_commentTitle_b p{
+    float: left;
+}
+.detail_commentTitle_b span{
+    float: right;
+}
+.detail_commentTitle_c{
+    height: 0.07rem;
+    margin-top: 0.12rem;
+    overflow: hidden;
+}
+.detail_commentTitle_c p{
+    width: 0.07rem;
+    height: 0.07rem;
+    border-radius: 50%;
+    float: left; 
+    margin-right: 0.06rem;   
+}
+.detail_commentTitle_c span{
+    width: 6.63rem;
+    height: 1px;
+    background-color: #999999;
+    float: right; 
+    margin-top: 0.03rem;
+}
+
+.detail_commentCon{
+    width: 6.85rem;
+    margin: 0.3rem auto 0;
+}
+.detail_commentCon_li{
+    width: 100%;
+    margin-bottom: 0.18rem;
+}
+.detail_commentCon_li_a{
+    width: 100%;
+    height: 0.8rem;
+}
+.detail_commentCon_li_a img{
+    float: left;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+}
+.detail_commentCon_li_a p{
+    height: 0.8rem;
+    float: left;
+    margin-left: 0.16rem;
+    font-size: 0.24rem;
+    line-height: 0.8rem;
+    color: #333333;
+}
+.detail_commentCon_li_a span{
+    height: 0.8rem;
+    float: right;
+    font-size: 0.2rem;
+    line-height: 0.8rem;
+    color: #999999;
+}
+.detail_commentCon_li_b{
+    width: 5.9rem;
+    margin: 0.16rem 0 0 0.95rem;
+    padding-bottom: 0.16rem;
+    font-size: 0.24rem;
+    color: #666666;
+    line-height: 0.3rem;
+    border-bottom: 1px dashed #999999;
+}
+.detail_commentCon_more{
+    width: 1.2rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    font-size: 0.2rem;
+    color: #999999;
+    text-align: center;
+    line-height: 0.3rem;
+}
+
+.comment_textarea{
+    width: 7.05rem;
+    height: 2.23rem;
+    margin: 0.35rem auto 0;
+}
+.comment_textarea textarea{
+    display: block;
+    width: 6.85rem;
+    height: 0.98rem;
+    background-color: #f2f2f2;
+    border-radius: 0.08rem;
+    resize: none;
+    outline: none;
+    font-size: 0.22rem;
+    color: #666666;
+    line-height: 0.3rem;
+    padding: 0.05rem 0.1rem;
+}
+.comment_textarea_btn{
+    width: 100%;
+    height: 0.46rem;
+    margin-top: 0.18rem;
+}
+.comment_textarea_btn p{
+    width: 0.86rem;
+    height: 0.45rem;
+    float: right;
+    background-color: #000000;
+    font-size: 0.26rem;
+    color: #ffffff;
+    line-height: 0.45rem;
+    text-align: center;
+    border-radius: 0.06rem;
+}

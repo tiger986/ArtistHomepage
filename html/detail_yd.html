@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>作品详情</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/public_yd.css">
+    <link rel="stylesheet" type="text/css" href="../css/detail_yd.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="detailController">	
+	<div class="homeBox_ydTop">
+		<div class="homeBox_ydTop_logo">谭青水彩</div>
+		<div class="homeBox_ydTop_more">
+			<img src="../image/ydMore.png" ms-click="openBar()" />
+			<div class="ydTop_more_box hide" ms-class="hide:!barShow">
+				<a class="home" href="./home_yd.html" ms-html="language=='CN'?'首页':'Home'"></a>
+				<a class="about" href="./about_yd.html" ms-html="language=='CN'?'关于':'About'"></a>
+				<a class="opus barColor" href="./opus_yd.html" ms-html="language=='CN'?'作品':'Opus'"></a>
+				<!-- <a class="phone" href="./home_yd.html">联系我们</a> -->
+				<a class="sign" href="./sign_yd.html" ms-html="language=='CN'?'登录':'Sign in'"></a>
+				<a class="register" href="./register_yd.html" ms-html="language=='CN'?'注册':'Register'"></a>
+			</div>
+		</div>
+		<div class="homeBox_ydTop_language" ms-html="language" ms-click="checkLan()"></div>
+	</div>
+
+	<div class="homeBox_line"></div>
+
+	<div class="positionTitle">
+		<p></p>
+		<span ms-html="language=='CN'?'首页 >':'Home >'"></span>
+		<p></p>
+		<span ms-html="language=='CN'?'作品 >':'Opus >'"></span>
+		<p></p>
+		<span class="positionTitle_color" ms-html="language=='CN'?'作品详情':'Opus detail'"></span>
+	</div>
+
+	<div class="detail_pic">
+		<img ms-attr-src="detailData.pic" alt="" />
+	</div>
+
+	<div class="detail_info">
+		<div class="detail_info_a">
+			<p ms-html="detailData.name">作品名称</p>
+			<span ms-html="detailData.time">作品时间</span>
+		</div>
+		<div class="detail_info_b">
+			<p ms-html="detailData.address">作品地点</p>
+			<span ms-html="detailData.size">作品尺寸</span>
+		</div>
+		<div class="detail_info_c" ms-html="detailData.info">
+			于色彩透明一层颜色覆盖另一层可以产生特殊的效果，但调和颜色所以水彩画不宜制作大
+		</div>
+	</div>
+
+	<div class="detail_jump">
+		<div class="detail_jump_li hide" ms-class="hide:!detailData.previousId">
+			<p class="detail_jump_li_a" ms-html="language=='CN'?'上一篇':'Previous'"></p>
+			<a ms-attr-href="'./detail_yd.html#'+detailData.previousId" class="detail_jump_li_b" ms-html="detailData.previousName">作品名称</a>
+		</div>
+		<div class="detail_jump_li hide" ms-class="hide:!detailData.nextId">
+			<p class="detail_jump_li_a" ms-html="language=='CN'?'下一篇':'Next'"></p>
+			<a ms-attr-href="'./detail_yd.html#'+detailData.nextId" class="detail_jump_li_b" ms-html="detailData.nextName">作品名称</a>
+		</div>
+	</div>
+
+	<div class="detail_commentTitle">
+		<div class="detail_commentTitle_a">评论</div>
+		<div class="detail_commentTitle_b">
+			<p><b>NEW ST</b>EAK LINE</p>
+			<span ms-html="language=='CN'?commentNum+'人评论':commentNum+' comments'"></span>
+		</div>
+		<div class="detail_commentTitle_c">
+			<p style="background-color: #333333"></p>
+			<p style="background-color: #666666"></p>
+			<p style="background-color: #999999"></p>
+			<span></span>
+		</div>
+	</div>
+
+	<div class="detail_commentCon">
+		<div class="detail_commentCon_li" ms-repeat="commentData">
+			<div class="detail_commentCon_li_a">
+				<img ms-attr-src="el.src" alt="" />
+				<p ms-html="el.name"></p>
+				<span ms-html="el.time"></span>
+			</div>
+			<div class="detail_commentCon_li_b" ms-html="el.con">
+				新饶网站策划股份有限公司成立于2007年，注册资金80万，是湖南长沙一家专业的网站策划公司。公司主要服务于中小企业，提供网站策划，
+				网站设计制作建设，网络推广营销于一体的专业服务。公司以“专注网站，用心服务新饶网站策划股份有限公司成立于2007年，注册资金80万，是湖南长沙.
+			</div>
+		</div>
+		<div class="detail_commentCon_more" ms-html="language=='CN'?'查看更多':'Get more'" ms-click="getMore()"></div>
+	</div>
+
+	<div class="detail_commentTitle">
+		<div class="detail_commentTitle_a">我要评论</div>
+		<div class="detail_commentTitle_b">
+			<p><b>NEW ST</b>EAK LINE</p>
+		</div>
+		<div class="detail_commentTitle_c">
+			<p style="background-color: #333333"></p>
+			<p style="background-color: #666666"></p>
+			<p style="background-color: #999999"></p>
+			<span></span>
+		</div>
+	</div>
+
+	<div class="comment_textarea">
+		<textarea ms-attr-placeholder="language=='CN'?'留下你的足迹':'Leave your footprints'" ms-duplex="commentCon"></textarea>
+		<div class="comment_textarea_btn">
+			<p ms-html="language=='CN'?'发送':'Send'" ms-click="addComment()">发送</p>
+		</div>
+	</div>
+
+	<div class="homeBox_footer">
+		<div class="homeBox_footer_logo"></div>
+		<div class="homeBox_footer_text">
+			于色彩透明一层颜色覆盖另一层可以产生特殊的效果，
+			<br/>
+			但调和颜色所以水彩画不宜制作大
+		</div>
+		<div class="homeBox_footer_li">
+			<p><b class="homeBox_footer_li_addr"></b><span>北京市海淀区建设路88号</span></p>
+			<p><b class="homeBox_footer_li_mail"></b><span>aimeimianbaofang@163.com</span></p>
+			<p><b class="homeBox_footer_li_tel"></b><span>400-800-8828</span></p>
+		</div>
+		<div class="homeBox_footer_map" id="container"></div>
+		<div class="homeBox_footer_copyright">北京市海淀区公安局备案号:2587774456 copyright <span>C</span> 2009-2020 ZOLL</div>
+	</div>
+
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+         /*rem设置设计稿为750*/
+	    (function (doc, win) {
+	        var docEl = doc.documentElement,
+	                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	                recalc = function () {
+	                    var clientWidth = docEl.clientWidth;
+	                    if (!clientWidth) return;
+	                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+	                };
+	        if (!doc.addEventListener) return;
+	        win.addEventListener(resizeEvt, recalc, false);
+	        doc.addEventListener('DOMContentLoaded', recalc, false);
+	    })(document, window);   
+</script>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nSxiPohfziUaCuONe4ViUP2N"></script>
+<script type="text/javascript" src="../js/map.js"></script>
+
+<script>
+    require(['./detail'], function (model) {
+
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+
+		//获取作品id(用于请求作品详情数据及评论)
+		model.opusId = location.href.split('#')[1];
+		//console.log(model.opusId);
+		
+        avalon.scan();
+    });
+</script>

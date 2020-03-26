@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/public_yd.css">
+    <link rel="stylesheet" type="text/css" href="../css/home_yd.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="homeController">	
+	<div class="homeBox_ydTop">
+		<div class="homeBox_ydTop_logo">谭青水彩</div>
+		<div class="homeBox_ydTop_more">
+			<img src="../image/ydMore.png" ms-click="openBar()" />
+			<div class="ydTop_more_box hide" ms-class="hide:!barShow">
+				<a class="home barColor" href="./home_yd.html" ms-html="language=='CN'?'首页':'Home'"></a>
+				<a class="about" href="./about_yd.html" ms-html="language=='CN'?'关于':'About'"></a>
+				<a class="opus" href="./opus_yd.html" ms-html="language=='CN'?'作品':'Opus'"></a>
+				<!-- <a class="phone" href="./home_yd.html">联系我们</a> -->
+				<a class="sign" href="./sign_yd.html" ms-html="language=='CN'?'登录':'Sign in'"></a>
+				<a class="register" href="./register_yd.html" ms-html="language=='CN'?'注册':'Register'"></a>
+			</div>
+		</div>
+		<div class="homeBox_ydTop_language" ms-html="language" ms-click="checkLan()"></div>
+	</div>
+
+	<div class="homeBox_line"></div>
+
+	<div class="homeBox_title">
+		<div class="homeBox_title_a">
+			<span>关于<i>我</i></span>
+		</div>
+		<div class="homeBox_title_b"><span>ABOUT ME</span></div>
+	</div>
+
+	<div class="homeBox_synopsis">
+		<div class="homeBox_synopsis_pic">
+			<img src="../image/synopsis_pic.png" />
+		</div>
+		<div class="homeBox_synopsis_con">
+			<div class="homeBox_synopsis_con_title">
+				<div class="homeBox_synopsis_con_title_left">01</div>
+				<div class="homeBox_synopsis_con_title_right">
+					<p class="homeBox_synopsis_con_title_right_a">画家简介</p>
+					<p class="homeBox_synopsis_con_title_right_b">Artist introduction</p>
+				</div>
+			</div>
+			<div class="homeBox_synopsis_con_text">
+				这里是画家简介概要内容这里是画家简介概要内容，这里是画家简介概要内容这里是画家简介概要内容，
+				这里是画家简介概要内容这里是画家简介概要内容这里是画家简介概要内容这里是画家简介概要内容，
+				这里是画家简介概要内容这里是画家简介概要内容。
+				<br/><br/>
+				Here is a brief introduction of the painterHere is a brief introduction of the painter,
+				Here is a brief introduction of the painterHere is a brief introduction of the painter.
+				Here is a brief introduction of the painterHere is a brief introduction of the painter.
+			</div>
+			<a href="./about_yd.html" class="homeBox_synopsis_con_btn">MORE >></a>
+		</div>
+	</div>
+
+	<div class="homeBox_line"></div>
+
+	<div class="homeBox_title homeBox_title2">
+		<div class="homeBox_title_a">
+			<span>代表<i>作品</i></span>
+		</div>
+		<div class="homeBox_title_b"><span>REPRESENTATIVE WORKS</span></div>
+	</div>
+
+	<div class="homeBox_ydWorks">
+		<div class="homeBox_ydWorks_list" ms-repeat="worksData">
+			<img ms-attr-src="el.pic" alt="" />
+			<div class="homeBox_ydWorks_list_info">
+				<div class="homeBox_ydWorks_list_info_title" ms-html="el.name">作品名称</div>
+				<div class="homeBox_ydWorks_list_info_line">
+					<p></p>
+					<span></span>
+				</div>
+				<div class="homeBox_ydWorks_list_info_text" ms-html="el.content">作品内容</div>
+				<a ms-attr-href="'./detail_yd.html#'+el.id" class="homeBox_ydWorks_list_info_btn">MORE</a>
+			</div>
+		</div>
+		<div class="homeBox_pcWorks_btn">
+			<a href="./opus_yd.html">MORE >></a>
+		</div>
+	</div>
+
+	<div class="homeBox_line"></div>
+
+	<div class="homeBox_title homeBox_title3">
+		<div class="homeBox_title_a">
+			<span>画廊<i>信息</i></span>
+		</div>
+		<div class="homeBox_title_b"><span>GALLERY INFORMATION</span></div>
+	</div>
+
+	<div class="homeBox_gallery">
+		<div class="homeBox_gallery_pic">
+			<img src="../image/yd_gallery.png" alt="" />
+			<div class="homeBox_gallery_addr">
+				<p>画室名称</p>
+				<span>画室地址画室地址</span>
+			</div>
+		</div>
+		<div class="homeBox_gallery_con">
+			<div class="homeBox_gallery_con_text">
+				水彩画是用水调和透明颜料作画的一种绘画方法，简称水彩，由于色彩透明，一层颜色覆盖另一层可以产生特殊的效果，
+				<br/><br/>
+				水彩画是用水调和透明颜料作画的一种绘画方法，简称水彩，由于色彩透明，一层颜色覆盖另一层可以产生特殊的效果，
+				但调和颜色过多或覆盖过多会使色彩肮脏，水干燥的快，所以水彩画不适宜制作大幅作品，适合制作风景等清新明快的小幅画作。
+				<br/><br/>
+				但调和颜色过多或覆盖过多会使色彩肮脏，水干燥的快，所以水彩画不适宜制作大幅作品，适合制作风景等清新明快的小幅画作。
+			</div>
+		</div>
+	</div>
+
+	<div class="homeBox_line"></div>
+
+	<div class="homeBox_footer">
+		<div class="homeBox_footer_logo"></div>
+		<div class="homeBox_footer_text">
+			于色彩透明一层颜色覆盖另一层可以产生特殊的效果，
+			<br/>
+			但调和颜色所以水彩画不宜制作大
+		</div>
+		<div class="homeBox_footer_li">
+			<p><b class="homeBox_footer_li_addr"></b><span>北京市海淀区建设路88号</span></p>
+			<p><b class="homeBox_footer_li_mail"></b><span>aimeimianbaofang@163.com</span></p>
+			<p><b class="homeBox_footer_li_tel"></b><span>400-800-8828</span></p>
+		</div>
+		<div class="homeBox_footer_map" id="container"></div>
+		<div class="homeBox_footer_copyright">北京市海淀区公安局备案号:2587774456 copyright <span>C</span> 2009-2020 ZOLL</div>
+	</div>
+
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+         /*rem设置设计稿为750*/
+	    (function (doc, win) {
+	        var docEl = doc.documentElement,
+	                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	                recalc = function () {
+	                    var clientWidth = docEl.clientWidth;
+	                    if (!clientWidth) return;
+	                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+	                };
+	        if (!doc.addEventListener) return;
+	        win.addEventListener(resizeEvt, recalc, false);
+	        doc.addEventListener('DOMContentLoaded', recalc, false);
+	    })(document, window);   
+</script>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nSxiPohfziUaCuONe4ViUP2N"></script>
+<script type="text/javascript" src="../js/map.js"></script>
+
+<script>
+    require(['./home'], function (model) {
+
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+
+		
+        avalon.scan();
+    });
+</script>

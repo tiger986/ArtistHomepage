@@ -1,0 +1,102 @@
+.opus_title{
+    width: 7.05rem;
+    height: 0.48rem;
+    border-bottom: 1px solid #000000;
+    margin: 0 auto;
+}
+.opus_title div{
+    height: 0.48rem;
+    float: right;
+    font-size: 0.2rem;
+    color: #666666;
+    line-height: 0.48rem;
+    margin-left: 0.4rem;
+    position: relative;
+}
+.opus_title div p{
+    width: 0.26rem;
+    height: 0.05rem;
+    background-color: #000000;
+    position: absolute;
+    left: 50%;
+    bottom: -0.03rem;
+    margin-left: -0.13rem
+}
+
+.opus_con{
+    width: 7.44rem;
+    min-height: 3.92rem;
+    margin: 0 auto;
+    background: url('../image/opus/yd_opus_bg.png') no-repeat center 0.42rem;
+    background-size: 7.04rem 12.02rem; 
+    overflow: hidden;
+}
+.opus_con_li{
+    width: 3.32rem;
+    height: 3.92rem;
+    padding: 0 0.2rem;
+    float: left;
+    margin-top: 0.32rem;
+}
+.opus_con_li img{
+    display: block;
+    width: 3.32rem;
+    height: 2.32rem;
+}
+.opus_con_li_a{
+    width: 100%;
+    height: 0.32rem;
+    margin-top:0.25rem;
+    font-size: 0.26rem;
+    color: #000000;
+    line-height: 0.32rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.opus_con_li_b{
+    width: 100%;
+    height: 0.22rem;
+    margin-top:0.08rem;
+    font-size: 0.18rem;
+    color: #333333;
+    line-height: 0.22rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.opus_con_li_c{
+    width: 100%;
+    height: 0.06rem;
+    margin-top: 0.1rem;
+    background: url('../image/opus/yd_opus_line.png') no-repeat left center;
+    background-size: 0.78rem 0.06rem; 
+}
+.opus_con_li_d{
+    width: 100%;
+    height: 0.26rem;
+    margin-top: 0.18rem;
+    font-size: 0.18rem;
+    color: #999999;
+    line-height: 0.26rem;
+    overflow: hidden;
+}
+.opus_con_li_d span{
+    float: left;
+    height: 0.26rem;
+    padding-left: 0.26rem; 
+    background: url('../image/yd_address_icon.png') no-repeat left top;
+    background-size: 0.17rem 0.24rem; 
+}
+.opus_con_li_d b{
+    float: left;
+    height: 0.26rem;
+    margin-left: 0.28rem;
+}
+
+.opus_page{
+    width: 6.8rem;
+    height: 0.54rem;
+    margin: 0.35rem auto;
+    text-align: center;
+}

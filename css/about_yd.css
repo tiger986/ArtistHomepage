@@ -1,0 +1,72 @@
+.about_picLi{
+    width: 7.5rem;
+    height: 3.66rem;
+    margin-top: 0.3rem;
+    overflow: hidden;
+}
+.about_picLi img{
+    width: 2.82rem;
+    height: 3.52rem;
+    border-radius: 0.06rem;
+}
+.about_picLi_li1{
+    float: left;
+    margin-left: -0.56rem;
+}
+.about_picLi_li2{
+    float: left;
+    margin: 0.14rem 0 0 0.08rem;
+}
+.about_picLi_li3{
+    float: right;
+    margin-right: -0.56rem;
+}
+
+.about_intrTitle{
+    width: 7.05rem;
+    margin: 0.58rem auto 0;
+}
+.about_intrTitle p{
+    font-size: 0.3rem;
+    line-height: 0.32rem;
+    color: #000000;
+}
+.about_intrTitle span{
+    display: block;
+    font-size: 0.16rem;
+    line-height: 0.18rem;
+    color: #666666;
+    margin-top: 0.06rem;
+}
+.about_intrCon{
+    width: 7.05rem;
+    font-size: 0.24rem;
+    color: #333333;
+    line-height: 0.36rem;
+    margin: 0.2rem auto 0;
+    padding-bottom: 0.25rem;
+}
+
+.about_bottom_pic{
+    width: 7.05rem;
+    margin: 0.04rem auto 0.18rem;
+    overflow: hidden;
+}
+.about_bottom_pic_a{
+    float: left;
+    width: 4.2rem;
+}
+.about_bottom_pic_a{
+    float: left;
+    width: 4.2rem;
+    height: 2.15rem;
+    margin-bottom: 0.08rem;
+
+}
+.about_bottom_pic_b{
+    float: left;
+    width: 2.77rem;
+    height: 2.15rem;
+    margin-left: 0.08rem;
+    margin-bottom: 0.08rem;
+}

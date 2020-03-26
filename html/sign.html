@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/public.css">
+    <link rel="stylesheet" type="text/css" href="../css/sign.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="signController">
+	<a class="backHomeBtn" href="home.html">
+			<span ms-html="language=='CN'?'返回首页':'Back home'"></span>
+		<img src="../image/register/register_home.png">
+	</a>
+	<div class="registerBox">
+		<div class="registerBox_form">
+			<h3 ms-html="language=='CN'?'账号登录':'Sign in'"></h3>
+			<div class="clearfix">
+				<img src="../image/register/register_mobile.png">
+				<input type="tel" name="mobile" ms-attr-placeholder="language=='CN'?'请输入用户名/手机号':'User name or phone number'" ms-duplex="mobile">
+			</div>
+			<div class="clearfix">
+				<img src="../image/register/register_pwd.png">
+				<input type="password" name="password" ms-attr-placeholder="language=='CN'?'请输入密码':'Enter your password'" ms-duplex="password">
+			</div>
+			<div class="fl registerBox_form_verification"><input type="text" name="verification" ms-attr-placeholder="language=='CN'?'验证码':'Verification code'" ms-duplex="verification"></div>
+			<span class="fl registerBox_form_getVerification" ms-class="hide:verificationFlag" ms-html="verificationText" ms-click="getVerification()"></span>
+			<span class="fl registerBox_form_getVerification hide" ms-class="hide:!verificationFlag" ms-html="verificationTime"></span>
+			<span class="registerBtn" ms-html="language=='CN'?'登录':'Sign in'" ms-click="signClick('pc')"></span>
+			
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
+
+<script>
+    require(['./sign'], function (model) {
+
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+		if(model.language == 'CN'){
+			model.verificationText = '获取验证码';
+		}else{
+			model.verificationText = 'Get code';
+		}
+
+	
+        avalon.scan();
+    });
+</script>

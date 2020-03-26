@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/public.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="homeController">
+	<div class="homeBox_pcTop">
+		<div class="homeBox_pcTop_log">
+			<img src="../image/logo.png" />
+			<p>谭青水彩</p>
+		</div>
+		<div class="homeBox_pcTop_bar">
+			<div class="pcTop_bar_con">
+				<div class="pcTop_bar_con_list">
+					<a class="barColor" href="./home.html" ms-html="language=='CN'?'首页':'Home'"></a>
+					<a href="./about.html" ms-html="language=='CN'?'关于':'About'"></a>
+					<a href="./opus.html" ms-html="language=='CN'?'作品':'Opus'"></a>
+					<!-- <a href="./home.html">联系我们</a> -->
+				</div>
+				<div class="pcTop_bar_con_btn">
+					<a href="./sign.html" ms-html="language=='CN'?'登录':'Sign in'"></a>
+					<b>/</b>
+					<a href="./register.html" ms-html="language=='CN'?'注册':'Register'"></a>
+					<span ms-html="language" ms-click="checkLan()"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="homeBox_title">
+		<div class="homeBox_title_a">
+			<span>关于<i>我</i></span>
+		</div>
+		<div class="homeBox_title_b"><span>ABOUT ME</span></div>
+	</div>
+
+	<div class="homeBox_synopsis">
+		<div class="homeBox_synopsis_pic">
+			<img src="../image/synopsis_pic.png" />
+		</div>
+		<div class="homeBox_synopsis_con">
+			<div class="homeBox_synopsis_con_title">
+				<div class="homeBox_synopsis_con_title_left">01</div>
+				<div class="homeBox_synopsis_con_title_right">
+					<p class="homeBox_synopsis_con_title_right_a">画家简介</p>
+					<p class="homeBox_synopsis_con_title_right_b">Artist introduction</p>
+				</div>
+			</div>
+			<div class="homeBox_synopsis_con_text">
+				这里是画家简介概要内容这里是画家简介概要内容，这里是画家简介概要内容这里是画家简介概要内容，
+				这里是画家简介概要内容这里是画家简介概要内容这里是画家简介概要内容这里是画家简介概要内容，
+				这里是画家简介概要内容这里是画家简介概要内容。
+				<br/><br/>
+				Here is a brief introduction of the painterHere is a brief introduction of the painter,
+				Here is a brief introduction of the painterHere is a brief introduction of the painter.
+				Here is a brief introduction of the painterHere is a brief introduction of the painter.
+			</div>
+			<a href="./about.html" class="homeBox_synopsis_con_btn">MORE >></a>
+		</div>
+	</div>
+
+	<div class="homeBox_title homeBox_title2">
+		<div class="homeBox_title_a">
+			<span>代表<i>作品</i></span>
+		</div>
+		<div class="homeBox_title_b"><span>REPRESENTATIVE WORKS</span></div>
+	</div>
+
+	<div class="homeBox_pcWorks">
+		<div class="homeBox_pcWorks_list" ms-repeat="worksData" ms-mouseenter="worksInfoShow()" ms-mouseleave="worksInfoHide()">
+			<img ms-attr-src="el.pic" alt="" />
+			<div class="homeBox_pcWorks_list_info hide">
+				<div class="homeBox_pcWorks_list_info_con">
+					<div class="homeBox_pcWorks_list_info_con_title" ms-html="el.name">作品名称作品名称</div>
+					<div class="homeBox_pcWorks_list_info_con_addr" ms-html="el.address">创作地点创作地点</div>
+					<div class="homeBox_pcWorks_list_info_con_material" ms-html="el.material">创作材料创作材料创作材料创作材料创作材料</div>
+					<div class="homeBox_pcWorks_list_info_con_text" ms-html="el.info">
+						水彩画是用水调和透明颜料作画的一种绘画方法，简称水彩，由于色彩透明，一层颜色覆盖另一层可以产生特殊的效果，
+						但调和颜色过多或覆盖过多会使色彩肮脏，水干燥的快，所以水彩画不适宜制作大幅作品，适合制作风景等清新明快的小幅画作。
+						水彩颜料携带方便，也可作为速写搜集素材用。与其他绘画比较起来，水彩画相当注重表现技法。其画法通常分“干画法”和“湿画法”两种。
+					</div>
+					<div class="homeBox_pcWorks_list_info_con_btn">
+						<a ms-attr-href="'./detail.html#'+el.id">MORE</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="homeBox_title homeBox_title3">
+		<div class="homeBox_title_a">
+			<span>画廊<i>信息</i></span>
+		</div>
+		<div class="homeBox_title_b"><span>GALLERY INFORMATION</span></div>
+	</div>
+
+	<div class="homeBox_pcGallery">		
+		<div class="homeBox_pcGallery_title">
+			<p class="homeBox_pcGallery_title_a">画廊名称</p>
+			<p class="homeBox_pcGallery_title_b">Corporate culture and philosophy</p>
+		</div>
+		<div class="homeBox_pcGallery_line">
+			<p></p>
+			<span></span>
+		</div>
+		<div class="homeBox_pcGallery_con">
+			<div class="homeBox_pcGallery_con_text">
+					水彩画是用水调和透明颜料作画的一种绘画方法，简称水彩，由于色彩透明，一层颜色覆盖另一层可以产生特殊的效果，
+					但调和颜色过多或覆盖过多会使色彩肮脏，水干燥的快，所以水彩画不适宜制作大幅作品，适合制作风景等清新明快的小幅画作。
+					水彩颜料携带方便，也可作为速写搜集素材用。与其他绘画比较起来，水彩画相当注重表现技法。其画法通常分“干画法”和“湿画法”两种。
+					<br/><br/>
+					Here is a brief introduction of the painterHere is a brief introduction of the painter,
+					Here is a brief introduction of the painterHere is a brief introduction of the painter.
+					Here is a brief introduction of the painterHere is a brief introduction of the painter.
+			</div>
+			<div class="homeBox_pcGallery_con_bg1"></div>
+			<div class="homeBox_pcGallery_con_bg2"></div>
+		</div>
+	</div>
+
+	<div class="homeBox_footer">
+		<div class="homeBox_footer_con">
+			<div class="homeBox_footer_con_left">
+				<p>关于我们 | 招商合作 | 法律规范</p>
+				<p><span>XXXXXXXXXX</span>政府与社会资本合作(PPP)工作中心</p>
+				<p>主管部门 : 中华人民共和国太原发展和改革委员会</p>
+				<p>北京市XX画廊XXXXXXXXXX</p>
+				<p>风险提示 : 网站信息来源及用户自行发布，使用前自行核实，风险自负。</p>
+			</div>
+			<div class="homeBox_footer_con_center">
+				<div class="homeBox_footer_con_center_li">
+					<div class="homeBox_footer_con_center_li_icon homeBox_footer_con_center_li_icon1"></div>
+					<div class="homeBox_footer_con_center_li_text">
+						<p>联系电话 :</p>
+						<p><span>400-150-1568</span>400-150-1578</p>
+					</div>
+				</div>
+				<div class="homeBox_footer_con_center_li">
+					<div class="homeBox_footer_con_center_li_icon homeBox_footer_con_center_li_icon2"></div>
+					<div class="homeBox_footer_con_center_li_text">
+						<p>公司地址 :</p>
+						<p>北京市朝阳区望京SOHO2栋四层4012室</p>
+						<p>版权所有 : XX科技有限公司</p>
+					</div>
+				</div>
+			</div>
+			<div class="homeBox_footer_con_right">
+				<img src="../image/qrCode.png" alt="" />
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+<script>
+    require(['./home'], function (model) {
+
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+		
+        avalon.scan();
+    });
+</script>

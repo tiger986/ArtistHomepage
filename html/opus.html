@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>作品列表</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/public.css">
+    <link rel="stylesheet" type="text/css" href="../css/custom-pagination.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/opus.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/custom-pagination.min.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="opusController">
+	<div class="homeBox_pcTop">
+		<div class="homeBox_pcTop_log">
+			<img src="../image/logo.png" />
+			<p>谭青水彩</p>
+		</div>
+		<div class="homeBox_pcTop_bar">
+			<div class="pcTop_bar_con">
+				<div class="pcTop_bar_con_list">
+					<a href="./home.html" ms-html="language=='CN'?'首页':'Home'"></a>
+					<a href="./about.html" ms-html="language=='CN'?'关于':'About'"></a>
+					<a class="barColor" href="./opus.html" ms-html="language=='CN'?'作品':'Opus'"></a>
+					<!-- <a href="./home.html">联系我们</a> -->
+				</div>
+				<div class="pcTop_bar_con_btn">
+					<a href="./sign.html" ms-html="language=='CN'?'登录':'Sign in'"></a>
+					<b>/</b>
+					<a href="./register.html" ms-html="language=='CN'?'注册':'Register'"></a>
+					<span ms-html="language" ms-click="checkLan()"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="opusBox wrap">
+		<div class="opusBox_pcTop_mbx clearfix">
+			<div class="fl opusBox_pcTop_mbx_left">
+				<img class="fl" src="../image/about/about_ico1.png">
+				<a href="javascript:;" class="fl" ms-html="language=='CN'?'首页':'Home'"></a>
+				<img class="fl" src="../image/about/about_ico2.png">
+				<a href="javascript:;" class="fl" ms-html="language=='CN'?'作品':'Opus'"></a>
+			</div>
+			<div class="opusBox_pcTop_mbx_right fr ">
+				<span ms-class="active:opusType==1" ms-html="language=='CN'?'按年代':'Time'" ms-click="checkType(1)"></span>
+				<span ms-class="active:opusType==2" ms-html="language=='CN'?'按题材':'Subject'" ms-click="checkType(2)"></span>
+			</div>	
+		</div>
+		<ul class="opusBox_list">
+			<li class="clearfix" ms-repeat="opusData">
+				<p class="fl"><img ms-attr-src="el.src"></p>
+				<div class="fl">
+					<h2><span ms-html="$index<10?'0'+($index+1)+'.':($index+1)+'.'">01.</span><em ms-html="el.name">画作名称</em></h2>
+					<div class="opusBox_opusDesc">
+						<p ms-html="el.desc">鲑鱼子寿司美味且营养价值高,鲑鱼子寿司价格公道,美味地道,鲑鱼子寿司美味且营养价值高,上海最正宗的鲑鱼子寿司在哪味且营养价值高,上海最正宗味且营养价值高,上海最正宗味且营养价值高,上海最正宗里...</p>
+						<p ms-html="el.descEng">Salmon and sushi are delicious and nutritious. Salmon and sushi aare fair and delicious. Salmon and sushi are delicious and nutritious...</p>
+					</div>
+					<div class="opusBox_moreBox">
+						<a ms-attr-href="'../html/detail.html#'+el.id"><img src="../image/opus/opus_more.png"></a>
+						<em ms-html="el.time">2018.02.25</em>
+					</div>
+				</div>
+				<a ms-attr-href="'../html/detail.html#'+el.id" class="mask"></a>
+			</li>
+		</ul>
+
+		<div id="page" class="page"></div>
+				
+	</div>
+
+</div>
+</body>
+</html>
+
+<script>
+    require(['./opus'], function (model) {
+		
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+		
+		var options = {
+		       next_prev_links: 'yes',//是否开启[上一页/下一页]
+		       inupt_forward: 'yes',//是否开启[输入跳转]
+		       total: Math.ceil(model.opusData.length/5),//总页数（必需）
+		       count: 6,//显示的页码个数，多余页码会用...代替
+		       changePage: function (pageNum) {
+					console.log('当前页码：'+pageNum);
+					
+			   }//页码发生改变时调用（必需）
+		}
+		var box = new CustomPagination('#page', options);
+
+        avalon.scan();
+    });
+
+</script>

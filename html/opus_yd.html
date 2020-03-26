@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>作品列表</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/public_yd.css">
+    <link rel="stylesheet" type="text/css" href="../css/opus_yd.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="opusController">	
+	<div class="homeBox_ydTop">
+		<div class="homeBox_ydTop_logo">谭青水彩</div>
+		<div class="homeBox_ydTop_more">
+			<img src="../image/ydMore.png" ms-click="openBar()" />
+			<div class="ydTop_more_box hide" ms-class="hide:!barShow">
+				<a class="home" href="./home_yd.html" ms-html="language=='CN'?'首页':'Home'"></a>
+				<a class="about" href="./about_yd.html" ms-html="language=='CN'?'关于':'About'"></a>
+				<a class="opus barColor" href="./opus_yd.html" ms-html="language=='CN'?'作品':'Opus'"></a>
+				<!-- <a class="phone" href="./home_yd.html">联系我们</a> -->
+				<a class="sign" href="./sign_yd.html" ms-html="language=='CN'?'登录':'Sign in'"></a>
+				<a class="register" href="./register_yd.html" ms-html="language=='CN'?'注册':'Register'"></a>
+			</div>
+		</div>
+		<div class="homeBox_ydTop_language" ms-html="language" ms-click="checkLan()"></div>
+	</div>
+
+	<div class="homeBox_line"></div>
+
+	<div class="positionTitle">
+		<p></p>
+		<span ms-html="language=='CN'?'首页 >':'Home >'"></span>
+		<p></p>
+		<span class="positionTitle_color" ms-html="language=='CN'?'作品':'Opus'"></span>
+	</div>
+
+	<div class="opus_title">
+		<div ms-click="checkType(2)">
+			<span ms-html="language=='CN'?'按题材':'Subject'"></span>
+			<p class="hide" ms-class="hide:opusType==1"></p>
+		</div>
+		<div ms-click="checkType(1)">
+			<span ms-html="language=='CN'?'按年代':'Time'"></span>
+			<p class="hide" ms-class="hide:opusType==2"></p>
+		</div>
+	</div>
+	<div class="opus_con">
+		<div class="opus_con_li" ms-repeat="opusData">
+            <a ms-attr-href="'./detail_yd.html#'+el.id">
+                <img ms-attr-src="el.src" alt="" />
+                <p class="opus_con_li_a" ms-htnl="el.name">作品名称</p>
+                <p class="opus_con_li_b">NAME OF PAINTING</p>
+                <p class="opus_con_li_c"></p>
+                <p class="opus_con_li_d">
+                    <span ms-html="el.address">作品地点</span>
+                    <b ms-html="el.size">作品尺寸</b>
+                </p>
+            </a>
+		</div>
+    </div>
+    
+	<div class="opus_page">加载更多</div>
+
+
+	<div class="homeBox_line"></div>
+
+
+	<div class="homeBox_footer">
+		<div class="homeBox_footer_logo"></div>
+		<div class="homeBox_footer_text">
+			于色彩透明一层颜色覆盖另一层可以产生特殊的效果，
+			<br/>
+			但调和颜色所以水彩画不宜制作大
+		</div>
+		<div class="homeBox_footer_li">
+			<p><b class="homeBox_footer_li_addr"></b><span>北京市海淀区建设路88号</span></p>
+			<p><b class="homeBox_footer_li_mail"></b><span>aimeimianbaofang@163.com</span></p>
+			<p><b class="homeBox_footer_li_tel"></b><span>400-800-8828</span></p>
+		</div>
+		<div class="homeBox_footer_map" id="container"></div>
+		<div class="homeBox_footer_copyright">北京市海淀区公安局备案号:2587774456 copyright <span>C</span> 2009-2020 ZOLL</div>
+	</div>
+
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+         /*rem设置设计稿为750*/
+	    (function (doc, win) {
+	        var docEl = doc.documentElement,
+	                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	                recalc = function () {
+	                    var clientWidth = docEl.clientWidth;
+	                    if (!clientWidth) return;
+	                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+	                };
+	        if (!doc.addEventListener) return;
+	        win.addEventListener(resizeEvt, recalc, false);
+	        doc.addEventListener('DOMContentLoaded', recalc, false);
+	    })(document, window);   
+</script>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nSxiPohfziUaCuONe4ViUP2N"></script>
+<script type="text/javascript" src="../js/map.js"></script>
+
+<script>
+    require(['./opus'], function (model) {
+
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+
+		
+        avalon.scan();
+    });
+</script>

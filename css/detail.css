@@ -1,0 +1,180 @@
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3); }
+
+.homeBox {
+  padding-bottom: 90px; }
+
+.detialBox {
+  margin-top: 15px;
+  position: relative;
+  padding: 22px 40px 280px 40px;
+  box-sizing: border-box; }
+  .detialBox .detialBox_pcTop_mbx {
+    margin-bottom: 70px;
+    line-height: 38px;
+    font-size: 18px; }
+    .detialBox .detialBox_pcTop_mbx img {
+      margin-right: 20px;
+      margin-top: 11px;
+      float: left; }
+      .detialBox .detialBox_pcTop_mbx img:nth-child(1) {
+        margin-right: 10px;
+        margin-top: 0px; }
+    .detialBox .detialBox_pcTop_mbx a {
+      font-size: 18px;
+      color: #333;
+      margin-right: 15px;
+      float: left;
+      line-height: 38px; }
+      .detialBox .detialBox_pcTop_mbx a:nth-child(6) {
+        color: #fff; }
+  .detialBox .detialContentBox {
+    margin-bottom: 55px; }
+    .detialBox .detialContentBox .detialContent_title {
+      font-size: 26px;
+      color: #000;
+      font-weight: bold;
+      margin-bottom: 30px; }
+      .detialBox .detialContentBox .detialContent_title em {
+        font-size: 20px;
+        font-weight: bold;
+        color: #535353; }
+        .detialBox .detialContentBox .detialContent_title em:nth-child(2) {
+          color: #737373;
+          font-weight: normal; }
+      .detialBox .detialContentBox .detialContent_title span {
+        display: block; }
+    .detialBox .detialContentBox .detialContent_deac {
+      margin-bottom: 40px; }
+      .detialBox .detialContentBox .detialContent_deac span {
+        float: left;
+        margin-right: 35px;
+        font-size: 16px;
+        color: #545454;
+        font-weight: bold; }
+    .detialBox .detialContentBox .detialContent {
+      margin-bottom: 55px; }
+      .detialBox .detialContentBox .detialContent p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #000;
+        margin-bottom: 20px; }
+      .detialBox .detialContentBox .detialContent .detialContent_imgBox {
+        width: 1060px;
+        height: 610px;
+        margin: 0 auto;
+        box-shadow: 0px 1px 15px 0 rgba(53, 53, 53, 0.3);
+        overflow: hidden; }
+        .detialBox .detialContentBox .detialContent .detialContent_imgBox img {
+          width: 100%; }
+  .detialBox .detialBottom {
+    margin-bottom: 65px; }
+    .detialBox .detialBottom > div {
+      float: left;
+      margin-right: 25px;
+      background: #fff;
+      width: 395px;
+      height: 156px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding: 16px 12px; }
+      .detialBox .detialBottom > div > p {
+        width: 124px;
+        height: 124px;
+        border-radius: 10px;
+        margin-right: 20px; }
+      .detialBox .detialBottom > div > div {
+        width: 222px; }
+        .detialBox .detialBottom > div > div > span {
+          font-size: 38px;
+          color: rgba(0, 0, 0, 0.7);
+          margin-bottom: 12px;
+          display: block; }
+          .detialBox .detialBottom > div > div > span em {
+            font-size: 14px;
+            display: block;
+            margin-top: -5px; }
+        .detialBox .detialBottom > div > div a {
+          color: #000;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 3px; }
+        .detialBox .detialBottom > div > div p {
+          width: 222px;
+          font-size: 14px;
+          color: #000;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+  .detialBox .detialComment .detialComment_new {
+    margin-bottom: 50px; }
+    .detialBox .detialComment .detialComment_new > h3 {
+      font-size: 20px;
+      color: #000;
+      margin-bottom: 20px; }
+      .detialBox .detialComment .detialComment_new > h3 img {
+        margin-top: 3px; }
+    .detialBox .detialComment .detialComment_new .detialComment_new_list {
+      width: 1000px;
+      margin-bottom: 30px; }
+      .detialBox .detialComment .detialComment_new .detialComment_new_list li {
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+        padding: 25px 0; }
+        .detialBox .detialComment .detialComment_new .detialComment_new_list li > div {
+          width: 220px;
+          margin-right: 15px;
+          font-size: 18px;
+          line-height: 67px;
+          color: rgba(0, 0, 0, 0.9); }
+          .detialBox .detialComment .detialComment_new .detialComment_new_list li > div img {
+            width: 67px;
+            height: 67px;
+            margin-right: 20px; }
+        .detialBox .detialComment .detialComment_new .detialComment_new_list li > p {
+          width: 765px;
+          font-size: 14px;
+          line-height: 22px;
+          color: #000; }
+    .detialBox .detialComment .detialComment_new .detialComment_new_more {
+      text-align: center;
+      font-size: 14px;
+      color: #333333; }
+      .detialBox .detialComment .detialComment_new .detialComment_new_more span {
+        cursor: pointer; }
+  .detialBox .detialComment .detialComment_write > h3 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 35px; }
+    .detialBox .detialComment .detialComment_write > h3 img {
+      margin-top: 3px; }
+  .detialBox .detialComment .detialComment_write > div {
+    width: 1000px;
+    height: 140px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    padding: 25px;
+    margin-bottom: 20px; }
+    .detialBox .detialComment .detialComment_write > div textarea {
+      border: 0;
+      background: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      color: #313131;
+      resize: none; }
+  .detialBox .detialComment .detialComment_write > .detialComment_add {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: #000;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer; }
+
+/*# sourceMappingURL=detial.css.map */

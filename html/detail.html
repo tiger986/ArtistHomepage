@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>作品详情</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/public.css">
+    <link rel="stylesheet" type="text/css" href="../css/detail.css">
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+<div class="homeBox" ms-controller="detailController">
+	<div class="homeBox_pcTop">
+		<div class="homeBox_pcTop_log">
+			<img src="../image/logo.png" />
+			<p>谭青水彩</p>
+		</div>
+		<div class="homeBox_pcTop_bar">
+			<div class="pcTop_bar_con">
+				<div class="pcTop_bar_con_list">
+					<a href="./home.html" ms-html="language=='CN'?'首页':'Home'"></a>
+					<a href="./about.html" ms-html="language=='CN'?'关于':'About'"></a>
+					<a class="barColor" href="./opus.html" ms-html="language=='CN'?'作品':'Opus'"></a>
+					<!-- <a href="./home.html">联系我们</a> -->
+				</div>
+				<div class="pcTop_bar_con_btn">
+					<a href="./sign.html" ms-html="language=='CN'?'登录':'Sign in'"></a>
+					<b>/</b>
+					<a href="./register.html" ms-html="language=='CN'?'注册':'Register'"></a>
+					<span ms-html="language" ms-click="checkLan()"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="detialBox wrap">
+		<div class="detialBox_pcTop_mbx clearfix">
+			<img class="fl" src="../image/about/about_ico1.png">
+			<a href="javascript:;" class="fl" ms-html="language=='CN'?'首页':'Home'"></a>
+			<img class="fl" src="../image/about/about_ico2.png">
+			<a href="javascript:;" class="fl" ms-html="language=='CN'?'作品':'Opus'"></a>
+			<img class="fl" src="../image/about/about_ico2.png">
+			<a href="javascript:;" class="fl" ms-html="language=='CN'?'作品详情':'Opus detail'"></a>
+		</div>
+		<div class="detialContentBox">
+			<h3 class="detialContent_title"><em>LOVE TO MAKE </em> <em> CAREER REALIZE BAKING DREAM</em><span ms-html="detailData.name">作品名称作品名称</span></h3>
+			<div class="clearfix detialContent_deac">
+				<span ms-html="detailData.address">作品地点</span>
+				<span ms-html="detailData.size">作品大小</span>
+				<span ms-html="detailData.time">创作时间</span>
+			</div>
+			<div class="detialContent">
+				<p ms-html="detailData.info">
+					在二十出头的年纪，小年轻们刚从安逸的校园里初入竞争激烈的社会，也开始陷入对未来的迷茫，不知道该何去何从？但是，有梦想的人从来不会迷路，只要朝着梦想的方向前进，拿出勇气与执行力，脚踏实地的付出，相信终有一天会抵达梦想的彼岸。
+					来自江苏常州的顾先生，是一位充满梦想的95后 有志青年，在同龄人都在对未来充满迷茫的时候，95后的他，对未来却有着清晰的想法，想拥有一份属于自己的烘焙事业。顾先生从小就非常热爱烘焙，多年来一直在关注烘焙方面的发展。
+				</p>
+				<div class="detialContent_imgBox">
+					<img ms-attr-src="detailData.pic">
+				</div>	
+			</div>
+		</div>
+		<div class="detialBottom clearfix">
+			<div class="clearfix hide" ms-class="hide:!detailData.previousId">
+				<p class="fl"><img src="../image/detial/detial_img2.png"></p>
+				<div class="fl">
+					<span>PREVIOUS<em>上一作品</em></span>
+					<a ms-attr-href="'./detail.html#'+detailData.previousId" ms-html="detailData.previousName">作品名称</a>
+					<p>几点上课恢复健康的护肤看电.....</p>
+				</div>
+			</div>
+			<div class="clearfix hide" ms-class="hide:!detailData.nextId">
+				<p class="fl"><img src="../image/detial/detial_img3.png"></p>
+				<div class="fl">
+					<span>NEXT<em>下一作品</em></span>
+					<a ms-attr-href="'./detail.html#'+detailData.nextId" ms-html="detailData.nextName">作品名称</a>
+					<p>甜点大家都爱，家都爱家都爱家都爱但是谁家的...</p>
+				</div>
+			</div>
+		</div>	
+		<div class="detialComment">
+			<div class="detialComment_new">
+				<h3>最新评论 <img src="../image/detial/detial_img4.png"></h3>
+				<ul class="detialComment_new_list">
+					<li class="clearfix" ms-repeat='commentData'>
+						<div class="fl"><img ms-attr-src="el.src"><span ms-html="el.name"></span></div>
+						<p class="fl" ms-html="el.con">新饶网站策划股份有限公司成立于2007年，注册资金80万，是湖南长沙一家专业的网站策划公司。公司主要服务于中小企业，提供网站策划，网站设计制作建设，网络推广营销于一体的专业服务。公司以“专注网站，用心服务新饶网站策划股份有限公司成立于2007年，注册资金80万，是湖南长沙.</p>
+					</li>
+				</ul>
+				<p class="detialComment_new_more"><span ms-html="language=='CN'?'查看更多评论':'Get more'" ms-click="getMore()"></span></p>	
+			</div>	
+			<div class="detialComment_write">
+				<h3>我也要说 <img src="../image/detial/detial_img4.png"></h3>
+				<div><textarea ms-attr-placeholder="language=='CN'?'留下你的足迹':'Leave your footprints'" ms-duplex="commentCon">	</textarea></div>
+				<span class="detialComment_add" ms-html="language=='CN'?'发送':'Send'" ms-click="addComment()"></span>
+			</div>	
+		</div>
+		
+	</div>
+
+</div>
+</body>
+</html>
+
+<script>
+    require(['./detail'], function (model) {
+
+		model.language = localStorage.getItem('tqLanguage') || 'CN';
+		
+        avalon.scan();
+    });
+</script>
